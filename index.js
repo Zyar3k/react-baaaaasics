@@ -1,15 +1,42 @@
-const page = (
+function Header() {
+  return (
+    <header>
+      <nav className="nav">
+        <img src="./logo192.png" className="nav-logo" />
+        <ul className="nav-items">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+function Footer() {
+  return (
+    <footer>
+      <small>Bobo Development. All rights reserved</small>
+    </footer>
+  );
+}
+function MainContent() {
+  return (
+    <main>
+      <h1>Reasons I'm excited to practice React</h1>
+      <ol>
+        <li>It's a popular library</li>
+        <li>I'm more likely to get a job</li>
+      </ol>
+    </main>
+  );
+}
+
+const Page = () => (
   <div>
-    <img src="./logo192.png" width="40px" />
-    <h1>Fun facts about React</h1>
-    <ul>
-      <li>Was first released in 2013</li>
-      <li>Was originally created by Jordan Walke</li>
-      <li>Ha well over 100k stars on Github</li>
-      <li>Is maintained by Facebook</li>
-      <li>Powers thousands of enterprise apps, including mobile apps</li>
-    </ul>
+    <Header />
+    <MainContent />
+    <Footer />
   </div>
 );
 
-ReactDOM.render(page, document.getElementById("root"));
+ReactDOM.render(<Page />, document.getElementById("root"));
